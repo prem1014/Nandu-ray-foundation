@@ -1,0 +1,32 @@
+<div class='col-xs-12'>
+	<div class="panel panel-default" style='border:0px;'>
+        <div class="panel-heading nrf-panel-heading">
+            <h4>Sign Up Here</h4>
+        </div>
+        <div class="panel-body sign-up-body">
+            <form role="form">
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email id" ng-model='signUpCtrl.email'>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" 
+                    ng-model='signUpCtrl.password'>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="pwd" placeholder="Confirm password" 
+                    ng-model='signUpCtrl.CnfPassword'>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="name" placeholder="Enter full name" ng-model='signUpCtrl.userName'>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="profession" placeholder="Enter your profession" ng-model='signUpCtrl.profession'>
+                </div>
+
+                <div class="form-group">
+                	<button type="submit" ng-click='signUpCtrl.signUp()' class="btn" style='width:100%'> Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
