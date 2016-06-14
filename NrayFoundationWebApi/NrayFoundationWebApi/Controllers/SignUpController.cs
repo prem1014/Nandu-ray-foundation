@@ -17,5 +17,10 @@ namespace NrayFoundationWebApi.Controllers
         {
             return Ok(SignUp.signUp(userDetails));
         }
+
+        public IHttpActionResult Get()
+        {
+            return Ok(SignUp.getRegistrationReq());
+        }
     }
 }

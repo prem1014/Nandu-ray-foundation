@@ -11,5 +11,6 @@ namespace NrayFoundationWebApi.Models
         public string password { get; set; }
         public string userName { get; set; }
         public string profession { get; set; }
+        public string status { get; set; }
     }
 }

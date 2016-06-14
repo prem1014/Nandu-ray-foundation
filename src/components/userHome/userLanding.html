@@ -17,7 +17,26 @@
                 <h4>New user registration request</h4>
              </div>
              <div class="panel-body user-home-body">
-
+                <table class='table'>
+                    <thead>
+                        <tr>
+                            <td>Name</td>
+                            <td>Id</td>
+                            <td>Profession</td>
+                            <td>Status</td>
+                            <td>Action</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat='userDetails in userDetails'>
+                            <td>{{userDetails}}</td>
+                            <td>{{userDetails}}</td>
+                            <td>{{userDetails}}</td>
+                            <td>{{userDetails}}</td>
+                            <td>{{userDetails}}</td>
+                        </tr>
+                    </tbody>
+                </table>
              </div>
          </div>
 	</div>

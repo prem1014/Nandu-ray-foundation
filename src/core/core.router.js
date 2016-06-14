@@ -27,7 +27,8 @@
             controllerAs:'signUpCtrl'
         })
         .when('/userHome',{
-            templateUrl:'components/userHome/userLanding.html'
+            templateUrl:'components/userHome/userLanding.html',
+            controller:'LandingController'
         })
         .when('/donate',{
             templateUrl:'components/donate/donate.html',

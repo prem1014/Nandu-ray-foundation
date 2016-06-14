@@ -17,9 +17,28 @@ namespace NrayFoundationWebApi.DAL
         {
             SqlConnection conn = DataBaseConnect.createConn();
             conn.Open();
-            sql = "Insert Into TBLLogin values('"+userDeatils.userId+"','"+userDeatils.password+"','"+userDeatils.userName+"','"+userDeatils.profession+"')";
+            sql = "Insert Into TBLLogin values('"+userDeatils.userId+"','"+userDeatils.password+"','"+userDeatils.userName+"','"+userDeatils.profession+"','"+userDeatils.status+"')";
             SqlCommand cmd = new SqlCommand(sql, conn);
             return cmd.ExecuteNonQuery();
+        }
+
+        public static UserSignUp getRegistrationReq()
+        {
+            UserSignUp userDetails = new UserSignUp(); ;
+            SqlConnection conn = DataBaseConnect.createConn();
+            conn.Open();
+            sql = "Select* from TBLLogin";
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            dr = cmd.ExecuteReader();
+
+            while(dr.Read()){
+                userDetails.userId = dr[0].ToString();
+                userDetails.userName = dr[2].ToString();
+                userDetails.profession = dr[3].ToString();
+                userDetails.status = dr[4].ToString();
+            }
+
+            return userDetails;
         }
     }
 }

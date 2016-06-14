@@ -8,7 +8,8 @@
 	function webApiService($http){
 		var service={
 			authUser:authUser,
-			signUp:signUp
+			signUp:signUp,
+			getUserRegReq:getUserRegReq
 		}
 		return service;
 
@@ -24,6 +25,10 @@
 
 		function signUp(userDetails){
 			return $http.post('http://localhost:51508//api/signUp',userDetails);
+		}
+
+		function getUserRegReq(){
+			return $http.get('http://localhost:51508//api/signUp');
 		}
 	}
 })();
