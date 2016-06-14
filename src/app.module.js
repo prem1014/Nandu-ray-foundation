@@ -7,6 +7,7 @@
 
         // Features (listed alphabetically)
         'nrf.app.login',
-        'nrf.app.signUp'
+        'nrf.app.signUp',
+        'nrf.app.donate'
     ]);
 })();

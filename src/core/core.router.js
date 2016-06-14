@@ -26,6 +26,13 @@
             controller:'SignUpController',
             controllerAs:'signUpCtrl'
         })
+        .when('/userHome',{
+            templateUrl:'components/userHome/userLanding.html'
+        })
+        .when('/donate',{
+            templateUrl:'components/donate/donate.html',
+            controller:'DonateController'
+        })
         .otherwise('/home')
     }
 })();

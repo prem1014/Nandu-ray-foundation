@@ -1,0 +1,50 @@
+<div class="row">
+	<div class="col-xs-12">
+		<div class="panel panel-default" style='border:0px;'>
+             <div class="panel-heading nrf-panel-heading">
+                <h4>Donate here to change some one life</h4>
+             </div>
+             <div class="panel-body donate-body">
+                  <div class="row">
+                  	<div class="col-xs-12">
+                     <ul style="color: white;">
+                 	<li>Select or enter your amount from below options</li>
+                 	<li>Click on make payment</li>
+                 	<li>Fill your details</li>
+                 </ul>
+                  	</div>
+                  	<div class="col-xs-12">
+                  	    <form role='form'>
+                  	    <div class="row" style="color: white;">
+                  			<div class="col-xs-4">
+                  				<input type="radio" name="amountGrp" ng-model='amount' value="100"> &#x20B9 100</input>
+                  			</div>
+                  			<div class="col-xs-4">
+                  				<input type="radio" name="amountGrp" ng-model='amount' value="200"> &#x20B9 200</input>
+                  			</div>
+                  			<div class="col-xs-4">
+                  				<input type="radio" name="amountGrp" ng-model='amount' value="500"> &#x20B9 500</input>
+                  			</div>
+                  		</div>
+                  		<div class="row" style="margin-top:15px; " ng-model='amount'>
+                  			<div class="col-xs-12">
+                  				<input type="text" placeholder="Enter amout as per your choice" class="form-control" ng-model='amount'>
+                  			</div>
+                  		</div>
+                  		<div class="row" style="margin-top:15px; ">
+                  			<div class="col-xs-12">
+                  				<h4 style="color: #FF5722;;">Total Amount: &#x20B9 {{amount}}</h4>
+                  			</div>
+                  		</div>
+                  		<div class="row" style="margin-top:15px; ">
+                  			<div class="col-xs-12">
+                  				<button type="submit" class="btn">Make Payment</button>
+                  			</div>
+                  		</div>
+                  	    </form>
+                  	</div>
+                  </div>
+	         </div>
+	    </div>
+	</div>     
+</div>
