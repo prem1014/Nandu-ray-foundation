@@ -22,3 +22,15 @@ box-shadow: inset 0px 0px 50px 0px #11a8ab,2px 8px 41px 4px #11a8ab;;
     border-color: #394263;
         margin-top: 20px;
 }
+
+.error-message{
+	    color: #d80b0b;
+    top: 5px;
+    font-style: oblique;
+    font-weight: bold;
+    position: relative;
+}
+
+.form-error{
+    border: 1px solid red;
+}

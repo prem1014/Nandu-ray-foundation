@@ -10,8 +10,17 @@
 
 		activate();
 
+        landingCtrl.submitProgram=submitProgram;
+
+        function submitProgram(){
+        	if(!$scope.createProgram.$valid){
+        		$scope.createProgramFrmSubmitted=true;
+        	}
+        }
+
 		function activate(){
 			getUserRegReq();
+			generateSubList();
 		}
 
 		function getUserRegReq(){
@@ -19,6 +28,33 @@
 			.then(function(data){
 				landingCtrl.userDetails=data.data;
 			})
+		}
+
+		function generateSubList(){
+			landingCtrl.subject=[
+			{
+				code:'M01',
+				name:'Math'
+			},
+			{
+				code:'Sc01',
+				name:'Science'
+			},
+			{
+				code:'Ssc01',
+				name:'Social Science'
+			},
+			{
+				code:'Hin01',
+				name:'Hindi'
+			},
+			{
+				code:'Eng01',
+				name:'English'
+			}
+			]
+
+			landingCtrl.selectedSub=landingCtrl.subject[0].code;
 		}
 	}
 })();

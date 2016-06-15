@@ -28,11 +28,13 @@
         })
         .when('/userHome',{
             templateUrl:'components/userHome/userLanding.html',
-            controller:'LandingController'
+            controller:'LandingController',
+            controllerAs:'landingCtrl'
         })
         .when('/donate',{
             templateUrl:'components/donate/donate.html',
-            controller:'DonateController'
+            controller:'DonateController',
+            controllerAs:'donateCtrl'
         })
         .otherwise('/home')
     }
