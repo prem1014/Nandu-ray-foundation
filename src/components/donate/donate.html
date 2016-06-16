@@ -11,48 +11,71 @@
                         <label>Select or enter your amount from below options</label>
                   	    <div class="row" style="color: white;">
                   			<div class="col-xs-4">
-                  				<input type="radio" name="amountGrp" ng-model='donateCtrl.amount' value="100" required ng-change='donateCtrl.updateAmount()'> &#x20B9 100</input>
+                  				<div class="form-group">
+                            <input type="radio" name="amountGrp" ng-model='donateCtrl.amount' value="100" required ng-change='donateCtrl.updateAmount()'> &#x20B9 100</input>
+                          </div>
                   			</div>
                   			<div class="col-xs-4">
-                  				<input type="radio" name="amountGrp" ng-model='donateCtrl.amount' value="200" required ng-change='donateCtrl.updateAmount()'> &#x20B9 200</input>
+                  				<div class="form-group">
+                             <input type="radio" name="amountGrp" ng-model='donateCtrl.amount' value="200" required ng-change='donateCtrl.updateAmount()'> &#x20B9 200</input>    
+                          </div>
                   			</div>
                   			<div class="col-xs-4">
-                  				<input type="radio" name="amountGrp" ng-model='donateCtrl.amount' value="500" required ng-change='donateCtrl.updateAmount()'> &#x20B9 500</input>
+                  				<div class="form-group">
+                              <input type="radio" name="amountGrp" ng-model='donateCtrl.amount' value="500" required ng-change='donateCtrl.updateAmount()'> &#x20B9 500</input>    
+                          </div>
                   			</div>
-                        <span class="error-message" ng-show='donateFrmSubmitted && donate.amountGrp.$error.required' style="    left: 15px;">Please select or enter amount</span>
-                  		</div>
-                  		<div class="row" style="margin-top:15px; ">
-                  			<div class="col-xs-12">
-                  				<input type="number" placeholder="Enter amout as per your choice" class="form-control" ng-model='donateCtrl.amount'ng-class="{'form-error':donateFrmSubmitted && donate.amountGrp.$error.required}" min='0' name="txtAmount">
-
-                          <span class="error-message" ng-show='donateFrmSubmitted && donate.txtAmount.$error.min'>Please enter amount greater than 0</span>
-                  			</div>
+                        <span class="error-message" ng-show='donateFrmSubmitted && donate.amountGrp.$error.required' style="    left: 15px;top:-8px;">Please select or enter amount</span>
                   		</div>
                   		<div class="row">
-                  			<div class="col-xs-12">
-                  				<h4 style="color: #FF5722;">Total Amount: &#x20B9 {{donateCtrl.amount}}</h4>
-                  			</div>
+                  			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                              <div class="form-group">
+                                <input type="number" placeholder="Enter amout as per your choice" class="form-control" ng-model='donateCtrl.amount'ng-class="{'form-error':donateFrmSubmitted && donate.amountGrp.$error.required}" min='0' name="txtAmount">
+
+                          <span class="error-message" ng-show='donateFrmSubmitted && donate.txtAmount.$error.min'>Please enter amount greater than 0</span>                         
+                              </div>
+                          </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                          <h4 style="color: #FF5722;">Total Amount: &#x20B9 {{donateCtrl.amount}}</h4>
+                        </div>                         
                   		</div>
                       <div class="row">
-                          <div class="col-xs-12">
+                          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                               <div class="form-group">
                                 <input type="text" placeholder="Enter your name" class="form-control"></input>
                               </div>
                           </div>
-                          <div class="col-xs-12">
+                          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="form-group">
                               <input type="email" placeholder="Enter your email id" class="form-control"></input>
                             </div>
                           </div>
-                          <div class="col-xs-12">
+                          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                             <div class="form-group">
                               <input type="text" placeholder="Enter your mobile no" class="form-control"></input>
                             </div>
                           </div>                          
                       </div>
+                      <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <textarea placeholder="Enter your address" class="form-control"></textarea>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <select class="form-control"></select>
+                          </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                          <div class="form-group">
+                            <select class="form-control"></select>
+                          </div>
+                        </div>                        
+                      </div>
                   		<div class="row" style="margin-top:15px; ">
                   			<div class="col-xs-12">
-                  				<button type="submit" class="btn" ng-click='donateCtrl.makePayment()'>Make Payment</button>
+                  				<button type="submit" class="btn" ng-click='donateCtrl.makePayment()'>Proceed to payment gateway</button>
                   			</div>
                   		</div>
                   	    </form>
