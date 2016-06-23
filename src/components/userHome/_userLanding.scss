@@ -9,3 +9,9 @@ table thead{
 .user-home-body label{
 	color:  #FF9800;
 }
+
+@media only screen and (max-width: 460px){
+    .hide-xs{
+         display:none;	
+    }
+}

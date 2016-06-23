@@ -15,7 +15,8 @@
 				userId:signUpCtrl.email,
 				password:signUpCtrl.password,
 				userName:signUpCtrl.userName,
-				profession:signUpCtrl.profession
+				profession:signUpCtrl.profession,
+				status:'pending'
 			};
 			signUpService.signUp(userDetails)
 			.then(function(data){

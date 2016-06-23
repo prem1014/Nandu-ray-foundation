@@ -43,23 +43,23 @@
                 <h4>New user registration request</h4>
              </div>
              <div class="panel-body user-home-body">
-                <table class='table'>
+                <table class='table table-responsive'>
                     <thead>
                         <tr>
                             <th>Name</th>
-                            <th>Id</th>
-                            <th>Profession</th>
+                            <th class='hide-xs'>Id</th>
+                            <th class='hide-xs'>Profession</th>
                             <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr ng-repeat='userDetails in userDetails'>
-                            <td>{{userDetails}}</td>
-                            <td>{{userDetails}}</td>
-                            <td>{{userDetails}}</td>
-                            <td>{{userDetails}}</td>
-                            <td>{{userDetails}}</td>
+                        <tr ng-repeat='userDetails in landingCtrl.userDetails' class="warning">
+                            <td>{{userDetails.userName}}</td>
+                            <td class='hide-xs'>{{userDetails.userId}}</td>
+                            <td class='hide-xs'>{{userDetails.profession}}</td>
+                            <td>{{userDetails.status}}</td>
+                            <td><button type='submit' class='btn btn-success'>Approve</button><button type='submit' class='btn btn-danger'>Reject</button></td>
                         </tr>
                     </tbody>
                 </table>
