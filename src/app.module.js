@@ -10,5 +10,15 @@
         'nrf.app.signUp',
         'nrf.app.donate',
         'nrf.app.home'
-    ]);
+    ])
+    .controller('AppController',appController);
+
+    appController.$inject=['$scope'];
+
+    function appController($scope){
+
+        $scope.$on('loggedInUser',function(event,userName){
+            $scope.loggedInUser=userName;
+        })
+    }
 })();
