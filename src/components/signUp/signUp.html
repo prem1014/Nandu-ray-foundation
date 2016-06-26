@@ -5,23 +5,28 @@
             <h4>Sign Up Here</h4>
         </div>
         <div class="panel-body sign-up-body">
-            <form role="form">
+            <form role="form" name='signUpForm' novalidate>
                 <div class="form-group">
-                    <input type="email" class="form-control" id="email" placeholder="Enter email id" ng-model='signUpCtrl.email'>
+                    <input type="email" class="form-control" name="email" placeholder="Enter email id" ng-model='signUpCtrl.email' ng-class="{'form-error':signUpFrmSubmitted && signUpForm.email.$error.required}" required>
+                    <span class='error-message' ng-show='signUpFrmSubmitted && signUpForm.email.$error.required'>Please enter email id</span>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" 
-                    ng-model='signUpCtrl.password'>
+                    <input type="password" class="form-control" name="pwd" placeholder="Enter password" 
+                    ng-model='signUpCtrl.password' ng-class="{'form-error':signUpFrmSubmitted && signUpForm.pwd.$error.required}" required>
+                    <span class='error-message' ng-show='signUpFrmSubmitted && signUpForm.pwd.$error.required'>Please enter password</span>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" id="pwd" placeholder="Confirm password" 
-                    ng-model='signUpCtrl.CnfPassword'>
+                    <input type="password" class="form-control" name="cnfPwd" placeholder="Confirm password" 
+                    ng-model='signUpCtrl.CnfPassword' ng-class="{'form-error':signUpFrmSubmitted && signUpForm.cnfPwd.$error.required}" required>
+                    <span class='error-message' ng-show='signUpFrmSubmitted && signUpForm.cnfPwd.$error.required'>Please enter password for confirmation</span>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="name" placeholder="Enter full name" ng-model='signUpCtrl.userName'>
+                    <input type="text" class="form-control" name="userName" placeholder="Enter full name" ng-model='signUpCtrl.userName' ng-class="{'form-error':signUpFrmSubmitted && signUpForm.userName.$error.required}" required>
+                    <span class='error-message' ng-show='signUpFrmSubmitted && signUpForm.userName.$error.required'>Please enter your full name</span>
                 </div>
                 <div class="form-group">
-                    <input type="text" class="form-control" id="profession" placeholder="Enter your profession" ng-model='signUpCtrl.profession'>
+                    <input type="text" class="form-control" name="profession" placeholder="Enter your profession" ng-model='signUpCtrl.profession' ng-class="{'form-error':signUpFrmSubmitted && signUpForm.profession.$error.required}" required>
+                    <span class='error-message' ng-show='signUpFrmSubmitted && signUpForm.profession.$error.required'>Please your profession</span>
                 </div>
 
                 <div class="form-group">

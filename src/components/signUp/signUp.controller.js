@@ -18,6 +18,8 @@
 				profession:signUpCtrl.profession,
 				status:'pending'
 			};
+
+			if($scope.signUpForm.$valid){
 			signUpService.signUp(userDetails)
 			.then(function(data){
 				console.log(data.data);
@@ -25,6 +27,10 @@
 					 swal('You have been registered. Go to login page to get logged in');
 				}
 			})
+		   }
+		   else{
+		   	$scope.signUpFrmSubmitted=true;
+		   }
 		}
 	}
 })();

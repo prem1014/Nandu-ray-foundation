@@ -8,6 +8,8 @@
 	function loginController($scope,$location,loginService){
 		var loginCtrl=this;
 
+		activate();
+
 		loginCtrl.login=login;
 
 		function login(){
@@ -16,13 +18,24 @@
 				 password:loginCtrl.password
 			}
 
-		/*	loginService.authUser(userCredential)
-			.then(function(data){
-				$location.path('login')
-				$scope.$emit('loggedInUser',data.data);
-			})*/
-			$scope.$emit('loggedInUser',loginCtrl.userName);
-			$location.path('userHome');
+			if($scope.loginForm.$valid){
+			loginService.authUser(userCredential)
+			.success(function(userName){
+				loginService.setUserName(userName)
+				$location.path('userHome')
+				$scope.$emit('loggedin','user logged in');
+			})
+			}
+			else{
+				$scope.loginFrmSubmitted=true;
+			}
+
+			//$scope.$emit('loggedInUser',loginCtrl.userName);
+			//$location.path('userHome');
+		}
+
+		function activate(){
+			loginService.clearCredentials();
 		}
 	}
 })();

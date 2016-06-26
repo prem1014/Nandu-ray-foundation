@@ -11,6 +11,8 @@
 		activate();
 
         landingCtrl.submitProgram=submitProgram;
+        landingCtrl.approveReq=approveReq;
+        landingCtrl.rejectReq=rejectReq;
 
         function submitProgram(){
         	if(!$scope.createProgram.$valid){
@@ -18,6 +20,14 @@
         	}
         }
 
+        function approveReq(){
+        	
+        }
+
+        function rejectReq(){
+
+        }
+        
 		function activate(){
 			getUserRegReq();
 			generateSubList();

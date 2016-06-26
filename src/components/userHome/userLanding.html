@@ -5,7 +5,7 @@
                 <h4>Create New Program</h4>
              </div>
              <div class="panel-body user-home-body">
-                <form role="form" name="createProgram" novalidate="">
+                <form role="form" name="createProgram" novalidate>
                 	<div class="form-group">
                          <label>Select Subject:</label> 
                          <select ng-options='subject.code as subject.name for subject in landingCtrl.subject' ng-model='landingCtrl.selectedSub' class="form-control" required name="subject"></select>
