@@ -74,7 +74,7 @@
             templateUrl:'components/userHome/userLanding.html',
             controller:'LandingController',
             controllerAs:'landingCtrl',
-            authenticate: true
+            authenticate: false
     });
   // Send to login if the URL was not found
   $urlRouterProvider.otherwise("/home");

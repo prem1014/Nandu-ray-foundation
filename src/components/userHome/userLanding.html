@@ -1,5 +1,58 @@
 <div class="row">
-	<div class="col-xs-12">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="panel panel-default" style='border:0px;'>
+             <div class="panel-heading nrf-panel-heading">
+                <h4>Expense Report</h4>
+             </div>
+             <div class="panel-body user-home-body">
+                 <table class='table table-responsive'>
+                     <thead>
+                         <tr>
+                             <td>Expense Amount</td>
+                             <td>Date</td>
+                             <td>Description</td>
+                         </tr>
+                     </thead>
+                     <tbody>
+                         <tr ng-repeat='expense in landingCtrl.expense'>
+                             <td>{{expense.amount}}</td>
+                             <td>{{expense.date}}</td>
+                             <td>{{expense.description}}</td>
+                         </tr>
+                     </tbody>
+                 </table>
+             </div>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="panel panel-default" style='border:0px;'>
+             <div class="panel-heading nrf-panel-heading">
+                <h4>Create Expense Report</h4>
+             </div>
+             <div class="panel-body user-home-body">
+                 <form role='form' name='expense'>
+                     <div class="form-group">
+                         <input type="text" placeholder="Enter expense amount" name="amount" ng-model='amount' class="form-control"></input>
+                     </div>
+                     <div class="form-group">
+                         <input type="date" name="date" ng-model='date' class='form-control'></input>
+                     </div>
+                     <div class="form-group">
+                         
+                     </div>
+                     <div class="form-group">
+                         <textarea placeholder="Expense description" class="form-control"></textarea>
+                     </div>
+                     <div class="form-group">
+                         <button type="submit" class="btn btn-success">Submit Expense Report</button>
+                     </div>
+                 </form>
+             </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
          <div class="panel panel-default" style='border:0px;'>
              <div class="panel-heading nrf-panel-heading">
                 <h4>Create New Program</h4>
@@ -37,7 +90,34 @@
              </div>
          </div>
 	</div>
-	<div class="col-xs-12">
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+          <div class="panel panel-default" style='border:0px;'>
+             <div class="panel-heading nrf-panel-heading">
+                <h4>Your Scheduled Program</h4>
+             </div>
+             <div class="panel-body user-home-body">
+                  <table class='table table-responsive'>
+                      <thead>
+                          <tr>
+                              <td>Subject Name</td>
+                              <td>Date</td>
+                              <td>Time Slot</td>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr ng-repeat='program in landingCtrl.scheduledPrgram'>
+                              <td>{{program.sName}}</td>
+                              <td>{{program.date}}</td>
+                              <td>{{program.slot}}</td>
+                          </tr>
+                      </tbody>
+                  </table>
+             </div>
+         </div>       
+    </div>
+</div>
+<div class="row">
+	<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
          <div class="panel panel-default" style='border:0px;'>
              <div class="panel-heading nrf-panel-heading">
                 <h4>New user registration request</h4>
@@ -66,4 +146,30 @@
              </div>
          </div>
 	</div>
+    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+         <div class="panel panel-default" style='border:0px;'>
+             <div class="panel-heading nrf-panel-heading">
+                <h4>Offline Donation</h4>
+             </div>
+             <div class="panel-body user-home-body">
+                <form>
+                 <div class='form-group'>
+                     <input type="text" placeholder="Enter receipt number" class="form-control" name="receiptId" ng-model='receiptId'></input>
+                 </div> 
+                 <div class='form-group'>
+                     <input type="number" placeholder="Enter donatted amount" class="form-control" name="donatedAmount" ng-model='donatedAmount'></input>
+                 </div>
+                 <div class='form-group'>
+                     <input type="date" placeholder="Enter donatted amount" class="form-control" name="donatedDate" ng-model='donatedDate'></input>
+                 </div>
+                 <div class='form-group'>
+                     <input type="text" placeholder="Enter doner name" class="form-control" name="donerName" ng-model='donerName'></input>
+                 </div>
+                 <div class='form-group'>
+                     <button class="btn btn-success" type="submit">Save Offline Donation</button>
+                 </div>                   
+                </form>
+             </div>
+         </div>        
+    </div>
 </div>
